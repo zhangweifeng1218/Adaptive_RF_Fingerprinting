@@ -14,7 +14,7 @@ from model.AlexNet import AlexNet
 from model.VGG_16_1D import VGG_16_1D
 from model.DAConv_VGG_16_1D import DAConv_VGG_16_1D
 from model.ResNet_50_1D import ResNet_50_1D
-from model.DAConv_ResNet_50_1D import DAConv_ResNet_50_1D
+from model.DAConv_ResNet_50_1D import DAConv_ResNet_50_1D, DAConv_ResNet_34_1D
 from model.CVCNN import CVCNN
 from model.AFFNet import AFFNet
 from utils import count_parameters, lr_schedule_func_builder, Logger, show_loss_acc_curve
@@ -28,7 +28,8 @@ model = {'AlexNet': AlexNet,
          'VGG': VGG_16_1D,
          'VGG-DAConv': DAConv_VGG_16_1D,
          'ResNet': ResNet_50_1D,
-         'ResNet-DAConv': DAConv_ResNet_50_1D,
+         'ResNet50-DAConv': DAConv_ResNet_50_1D,
+         'ResNet34-DAConv': DAConv_ResNet_34_1D,
          'CVCNN': CVCNN,
          'AFFNet': AFFNet}
 with open('{}mean_std.pkl'.format(cfg['train_data_dir']), 'rb') as f:
